@@ -1,0 +1,135 @@
+.costes {
+    background: #DEDEFF;
+    opacity: 0.8;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__cost {
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 17px;
+        position: relative;
+    }
+
+    &__cost::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background: #E6514A;
+        top: 50%;
+        left: -50px;
+    }
+
+    &__title {
+        padding-top: 20px;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 130%;
+    }
+
+    &__form {
+        padding-top: 52px;
+
+        &__prices {
+            &__desc-one {
+                padding-bottom: 16px;
+            }
+
+            &__desc-two {
+                padding-bottom: 60px;
+            }
+        }
+
+        &__desc {
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 32px;
+        }
+
+        &__items {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 60px;
+
+            &__block {
+                border: 1px solid #23283B;
+                border-radius: 40px;
+                position: relative;
+
+                &__radio {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+
+                    &:checked ~ .costes__form__items__label::before {
+                        background-color: #E6514A;
+                    }
+                }
+            }
+
+            &__label {
+                font-family: 'Lato';
+                font-size: 14px;
+                line-height: 17px;
+                cursor: pointer;
+                padding: 17px 65px;
+                display: block;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 17px;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #eee;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &__prices {
+            &__desc-one, &__desc-two {
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 130%;
+            }
+
+            &__rub {
+                color: #E6514A;
+            }
+        }
+
+        &__btn {
+            padding: 16px 36px;
+            background-color: #E6514A;
+            border: 0;
+            border-radius: 30px;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .costes {
+        &__form {
+            &__items {
+                flex-wrap: wrap;
+                align-items: center;
+
+                &__block {
+                    margin-top: 20px;
+                    max-width: 180px;
+                }
+            }
+        }
+    }
+}

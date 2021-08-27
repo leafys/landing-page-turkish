@@ -1,0 +1,299 @@
+.levels {
+    background: url('../../img/Rectangle.png') no-repeat,#3035C3;
+    background-size: cover;
+    padding-bottom: 10px;
+
+    &__title {
+        text-align: center;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 130%;
+        color: #fff;
+        padding-top: 80px;
+    }
+
+    &__blocks {
+        padding-top: 52px;
+        
+        &__item {
+            min-height: 464px;
+            background-color: #fff;
+            padding: 24px 32px 32px;
+            box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
+            border-radius: 10px;
+
+            &__btn {
+                border: 0;
+                background: transparent;
+                color: #3035C3;
+                ;
+            }
+
+            &__title {
+                padding-bottom: 28px;
+            }
+
+           &__letter {
+            font-weight: 800;
+            font-size: 52px;
+            line-height: 130%;
+            color: #E6514A;
+           } 
+
+           &__spells {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 130%;
+            color: #23283B;
+           }
+
+           &__text-level {
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 130%;
+            color: #3035C4;
+           }
+
+           &__desc {
+               font-family: 'Lato';
+               font-size: 16px;
+               line-height: 150%;
+               padding: 8px 0 20px;
+           }
+        }
+
+        &__navigation {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 170px 170px;
+
+            &__desc {
+                font-family: 'Lato';
+                font-size: 16px;
+                line-height: 17px;
+                color: #fff;
+            }
+        }
+
+        &__btn {
+            box-shadow: 0px 10px 40px rgba(0, 11, 68, 0.22);
+            border-radius: 28.5px;
+            width: 56px;
+            max-width: 100%;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #fff;
+        }
+    }
+
+    &__modal {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 15;
+
+        &__content {
+            width: 30%;
+            padding: 40px;
+            background-color: #fff;
+            min-height: 464px;
+            background-color: #fff;
+            padding: 24px 32px 32px;
+            border-radius: 10px;
+            position: relative;
+
+            &__close {
+                position: absolute;
+                right: 20px;
+                border: none;
+                background: #fff;
+            }
+
+            &__title {
+                padding-bottom: 28px;
+            }
+
+            &__letter {
+                font-weight: 800;
+                font-size: 52px;
+                line-height: 130%;
+                color: #E6514A;
+            }
+
+            &__text-level {
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 130%;
+                color: #3035C4;
+            }
+
+            &__spells {
+                font-weight: 800;
+                font-size: 16px;
+                line-height: 130%;
+                color: #23283B;
+            }
+
+            &__desc {
+                font-family: 'Lato';
+                font-size: 20px;
+                line-height: 150%;
+                padding: 8px 0 20px;
+            }
+        }
+
+        &.active {
+            display: flex;
+            background-color: rgba(35, 40, 59, 0.7);
+        }
+    }
+}
+
+@media screen and (max-width: 1660px) {
+    .levels {
+        &__blocks {
+            &__navigation {
+                &__desc {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .levels {
+        &__blocks {
+            &__item {
+                &__text-level {
+                    font-size: 18px;
+                }
+
+                &__desc {
+                    font-size: 15px;
+                }
+            }
+
+            &__navigation {
+                &__desc {
+                    font-size: 14px;
+                }
+            }
+
+            &__btn {
+                padding: 0 23px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .levels {
+        &__blocks {
+            &__navigation {
+                &__desc {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1137px) {
+    .levels {
+        &__blocks {
+            &__navigation {
+                margin: 60px 140px 140px;
+
+                &__desc {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: 992px) {
+    .levels {
+        &__blocks {
+            &__navigation {
+                margin: 60px 110px 110px; 
+            }
+
+            &__item {
+                &__desc {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: 867px) {
+    .levels {
+        &__blocks {
+            &__navigation {
+                margin: 60px 70px 70px;
+
+                &__desc {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .levels {
+        &__blocks {
+            &__navigation {
+                margin: 0 20px 20px;
+
+                &__desc {
+                    padding: 0;
+                }
+            }
+        }
+    }
+} 
+
+
+@media screen and (max-width: 576px) {
+    .levels {
+        &__title {
+            font-size: 28px;
+        }
+
+        &__blocks {
+            &__item {
+                &__desc {
+                    font-size: 20px;
+                }
+            }
+
+            &__navigation {
+                padding-bottom: 50px;
+                align-items: flex-start;
+                margin-top: 10px;
+
+                &__desc {
+                    padding: 100px 0 0 0;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+} 

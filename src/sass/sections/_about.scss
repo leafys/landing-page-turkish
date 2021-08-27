@@ -1,0 +1,138 @@
+.about {
+    padding-top: 120px;
+
+    &__desc {
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 17px;
+        padding-left: 52px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    &__desc::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: #E6514A;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 130%;
+    }
+    
+    &__benefits-one,&__benefits-two,&__benefits-three,&__benefits-four,&__benefits-five,&__benefits-six {
+        position: relative; 
+    }
+
+    &__benefits {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+
+    &__benefits-desc {
+        max-width: 170px;
+        text-align: center;
+        font-family: 'Lato';
+        font-size: 18px;
+        line-height: 150%;  
+    }
+
+    &__benefits-correct {
+        font-weight: bold;
+    }
+
+    &__benefits-blocks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__benefits-one {
+        margin-top: 203px;
+    } 
+
+    &__benefits-two {
+        margin-top: 153px;
+    }
+
+    &__benefits-three {
+        margin-top: 43px;
+    }
+
+    &__benefits-four {
+        margin-top: 63px;
+    }
+
+    &__benefits-five {
+        margin-top: 113px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .about {
+        &__benefits-blocks {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__benefits-item {
+            max-width: 33%;
+            width: 33%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .about {
+        &__elipse {
+            width: 120px;
+        }
+
+        
+        &__benefits {
+            top: 35px;
+            width: 45px;
+            left: 50%;
+        }
+
+        &__benefits-desc {
+            font-size: 14px;
+        }
+
+        &__desc {
+            text-align: center;
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        &__desc::after {
+            left: 50%;
+            transform: translateX(-190%);
+            height: 1px;
+        }
+    }
+}
+
+@media screen and (max-width: 337px) {
+    .about {
+        &__benefits-desc {
+            font-size: 12px;
+        }
+    }
+}
