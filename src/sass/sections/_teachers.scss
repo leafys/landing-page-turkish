@@ -1,0 +1,100 @@
+.teachers {
+    margin-top: 150px;
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__text {
+        position: relative;
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 17px;
+
+        &::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            position: absolute;
+            background: #E6514A;
+            top: 50%;
+            left: -50px;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 130%;  
+        padding-top: 20px;
+    }
+
+    &__blocks {
+        &__item {
+            opacity: 50%;
+
+            &__img {
+                border-radius: 50%;
+                margin: 60px 0 40px 0;
+                max-width: 120px;
+            }
+
+            &__info {
+                &__name {
+                    font-weight: 800;
+                    font-size: 28px;
+                    line-height: 130%;
+                }
+
+                &__desc {
+                    font-family: 'Lato';
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+
+                &__desc-one {
+                    padding: 20px 0 30px 0;
+                }
+
+                &__desc, &__name {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__slider-btn {
+        position: absolute;
+        top: 35%;
+        z-index: 11;
+    }
+
+    &__slider-btnOne {
+        right: 0;
+    }
+
+    &__slider-btnTwo {
+        left: 0;
+    }
+
+    &__slider-img {
+        cursor: pointer;
+    }
+
+    .swiper-slide-active {
+        .teachers__blocks__item {
+            opacity: 100%;
+            
+            &__img {
+                max-width: 200px;
+            }
+
+            &__info {
+
+                &__desc, &__name {
+                    display: block;
+                }
+            }
+        }
+    }
+}

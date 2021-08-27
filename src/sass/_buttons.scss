@@ -1,0 +1,43 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    width: max-content;
+    padding: 8px 35px 8px 25px;
+    border: none;
+    text-transform: uppercase;
+    svg {
+        margin-right: 10px;
+    }
+    &:hover {
+        background-color: $blue;
+        color: $white;
+        transition: all .3s ease;
+        border: 1px solid $white;
+        svg path {
+            transition: all .3s ease;
+            fill: $white;
+        }
+    }
+    &_blue {
+        color: $blue;
+        background-color: $white;
+        border: 1px solid $white;
+    }
+    &_white {
+        color: $blue;
+        background-color: $white;
+        border: 1px solid $blue;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+            transition: all .3s ease;
+            border: 1px solid $white;
+            svg path {
+                transition: all .3s ease;
+                fill: $white;
+            }
+        }
+    }
+}
